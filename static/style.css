@@ -18,8 +18,8 @@ body {
   background-image: url("/static/frst.jpeg");
   display: flex;
   flex-direction: column;
-  align-items: center; /* centers title */
-  padding-top: 40px;
+  align-items: center; /* centers title horizontally */
+  padding-top: 0;      /* 👈 pushed right up to the top */
 }
 
 /* Second background image */
@@ -33,7 +33,7 @@ body {
   font-size: 2em;
   text-shadow: 2px 2px 5px black;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 0; /* removes extra spacing */
 }
 
 /* M-Pesa payment box on the right side */
@@ -72,4 +72,3 @@ body {
 .mpesa-box button:hover {
   background: #f0f0f0;
 }
-
