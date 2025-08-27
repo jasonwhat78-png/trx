@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Forest Website</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- First background with title + M-Pesa box -->
+  <section class="bg bg1">
+    <h1 class="welcome-text">Welcome to Usanii Wasanaa</h1>
+
+    <!-- 👇 M-Pesa Payment Box -->
+    <div class="mpesa-box">
+      <h2>Pay with M-Pesa</h2>
+      <ol>
+        <li>Go to <strong>M-Pesa</strong> on your phone</li>
+        <li>Select <strong>Send Money</strong></li>
+        <li>Enter phone number: <strong id="mpesa-number">0704167254</strong></li>
+        <li>Enter the amount</li>
+        <li>Confirm and send</li>
+      </ol>
+      <button onclick="copyNumber()">📋 Copy Number</button>
+    </div>
+  </section>
+
+  <!-- Second background (no title here) -->
+  <section class="bg bg2">
+  </section>
+
+  <script>
+  function copyNumber() {
+    const num = document.getElementById("mpesa-number").innerText;
+    navigator.clipboard.writeText(num);
+    alert("M-Pesa number copied: " + num);
+  }
+  </script>
+</body>
+</html>
