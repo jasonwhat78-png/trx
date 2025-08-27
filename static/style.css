@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Shared background section styling */
+.bg {
+  height: 100vh;                  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;   
+  background-size: cover;
+  position: relative;
+}
+
+/* First background image */
+.bg1 {
+  background-image: url("/static/frst.jpeg");
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers title */
+  padding-top: 40px;
+}
+
+/* Second background image */
+.bg2 {
+  background-image: url("/static/irene.jpeg");
+}
+
+/* Title text only for first background */
+.bg1 .welcome-text {
+  color: greenyellow;
+  font-size: 2em;
+  text-shadow: 2px 2px 5px black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* M-Pesa payment box on the right side */
+.mpesa-box {
+  position: absolute;    /* take it out of the flow */
+  top: 100px;            /* push it down from the top */
+  right: 40px;           /* push it away from the right edge */
+  
+  background: #1ba548;        /* green background */
+  border: 2px solid #148c3d;  /* darker green border */
+  padding: 20px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  color: white;               /* text visible */
+  text-align: left;
+  max-width: 300px;
+}
+
+.mpesa-box h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.mpesa-box button {
+  margin-top: 10px;
+  background: #ffffff;
+  color: #1ba548;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mpesa-box button:hover {
+  background: #f0f0f0;
+}
