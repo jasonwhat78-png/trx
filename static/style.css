@@ -27,13 +27,8 @@ body {
   background-image: url("/static/frst.jpeg");
 }
 
-/* Second background image section */
-.bg2 {
-  background-image: url("/static/irene.jpeg");
-}
-
-/* Title text */
-.bg1 .welcome-text {
+/* Welcome text */
+.welcome-text {
   color: greenyellow;
   font-size: 2em;
   text-shadow: 2px 2px 5px black;
@@ -88,7 +83,7 @@ body {
     padding-top: 20px;
   }
 
-  .bg1 .welcome-text {
+  .welcome-text {
     font-size: 1.6em;
     padding: 15px;
   }
@@ -105,3 +100,4 @@ body {
     font-size: 16px;
   }
 }
+
