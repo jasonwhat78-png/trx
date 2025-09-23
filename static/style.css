@@ -1,25 +1,27 @@
+/* ========== Base Styles ========== */
 body {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 /* Shared background section styling */
 .bg {
-  height: 100vh;                  
+  min-height: 100vh; /* Better than fixed height */
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;   
+  background-attachment: fixed;
   background-size: cover;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* First background image */
 .bg1 {
   background-image: url("/static/frst.jpeg");
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centers title horizontally */
-  padding-top: 0;      /* 👈 pushed right up to the top */
+  padding-top: 0;
 }
 
 /* Second background image */
@@ -27,29 +29,31 @@ body {
   background-image: url("/static/irene.jpeg");
 }
 
-/* Title text only for first background */
+/* Title text in first background */
 .bg1 .welcome-text {
   color: greenyellow;
   font-size: 2em;
   text-shadow: 2px 2px 5px black;
   text-align: center;
-  margin: 0; /* removes extra spacing */
+  margin: 0;
+  padding: 20px;
 }
 
-/* M-Pesa payment box on the right side */
+/* M-Pesa payment box */
 .mpesa-box {
-  position: absolute;    /* take it out of the flow */
-  top: 100px;            /* push it down from the top */
-  right: 40px;           /* push it away from the right edge */
-  
-  background: #1ba548;        /* green background */
-  border: 2px solid #148c3d;  /* darker green border */
+  position: absolute;
+  top: 100px;
+  right: 40px;
+
+  background: #1ba548;
+  border: 2px solid #148c3d;
   padding: 20px;
   border-radius: 12px;
-  font-family: Arial, sans-serif;
-  color: white;               /* text visible */
+
+  color: white;
   text-align: left;
   max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .mpesa-box h2 {
@@ -71,4 +75,31 @@ body {
 
 .mpesa-box button:hover {
   background: #f0f0f0;
+}
+
+
+/* ========== ✅ Mobile & Tablet Styles ========== */
+@media (max-width: 1024px) {
+  .bg {
+    background-attachment: scroll; /* Prevent background issues on mobile/tablet */
+    background-position: center top;
+    padding-top: 20px;
+  }
+
+  .bg1 .welcome-text {
+    font-size: 1.6em;
+    padding: 15px;
+  }
+
+  .mpesa-box {
+    position: static;       /* Removes absolute positioning */
+    margin: 20px auto;      /* Centers the box */
+    width: 90%;             /* Responsive width */
+    max-width: 320px;
+  }
+
+  .mpesa-box button {
+    width: 100%;            /* Easier to tap on small screens */
+    font-size: 16px;
+  }
 }
