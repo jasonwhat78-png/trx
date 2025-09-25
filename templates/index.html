@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Forest Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+
   <!-- First background with title + M-Pesa box -->
   <section class="bg bg1">
     <h1 class="welcome-text">Welcome to Usanii Wasanaa</h1>
 
-    <!-- 👇 M-Pesa Payment Box -->
+    <!-- M-Pesa Payment Box -->
     <div class="mpesa-box">
       <h2>Pay with M-Pesa</h2>
       <ol>
@@ -24,19 +26,6 @@
     </div>
   </section>
 
-  <!-- Second background (no title here) -->
+  <!-- Optional second section (empty for now) -->
   <section class="bg bg2">
-  </section>
-
-  <!-- JavaScript -->
-  <script>
-    // Copy M-Pesa number to clipboard
-    function copyNumber() {
-      const num = document.getElementById("mpesa-number").innerText;
-      navigator.clipboard.writeText(num);
-      alert("M-Pesa number copied: " + num);
-    }
-
-    // Preload high-res background and replace blurred one
-    window.addEventListener('load', function () {
-      const bg1 = document.querySelector('.bg1');
+    <!-- Add conte
