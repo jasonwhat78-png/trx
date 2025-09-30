@@ -4,15 +4,16 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Background styling with clear image only */
+/* Background styling with repeating vertical image */
 .bg {
   min-height: 100vh;
-  background-image: url("/static/frst.jpeg"); /* Using clear image directly */
+  background-image: url("/static/frst.jpeg");
   background-color: #0f3e1e;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+
+  background-repeat: repeat-y;        /* Repeat vertically */
+  background-attachment: scroll;      /* Scrolls with content */
+  background-size: auto;              /* Use image's original size */
+
   position: relative;
 
   display: flex;
@@ -43,53 +44,5 @@ body {
 
   color: white;
   text-align: left;
-  max-width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+  max
 
-.mpesa-box h2 {
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.mpesa-box button {
-  margin-top: 10px;
-  background: #ffffff;
-  color: #1ba548;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.mpesa-box button:hover {
-  background: #f0f0f0;
-}
-
-/* Mobile & Tablet */
-@media (max-width: 1024px) {
-  .bg {
-    background-attachment: scroll;
-    background-position: center top;
-    padding-top: 20px;
-  }
-
-  .welcome-text {
-    font-size: 1.6em;
-    padding: 15px;
-  }
-
-  .mpesa-box {
-    position: static;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 320px;
-  }
-
-  .mpesa-box button {
-    width: 100%;
-    font-size: 16px;
-  }
-}
