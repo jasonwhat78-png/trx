@@ -44,5 +44,44 @@ body {
 
   color: white;
   text-align: left;
-  max
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
+.mpesa-box h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.mpesa-box button {
+  margin-top: 10px;
+  background: #ffffff;
+  color: #1ba548;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mpesa-box button:hover {
+  background: #f0f0f0;
+}
+
+/* Tablet and small desktop */
+@media (max-width: 1024px) {
+  .bg {
+    background-attachment: scroll;
+    background-position: center top;
+    padding-top: 20px;
+  }
+
+  .welcome-text {
+    font-size: 1.6em;
+    padding: 15px;
+  }
+
+  .mpesa-box {
+    pos
